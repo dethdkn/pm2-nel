@@ -1,0 +1,36 @@
+{
+  "name": "pm2-horus",
+  "type": "module",
+  "version": "0.01",
+  "private": true,
+  "packageManager": "pnpm@9.9.0",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxi typecheck",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "^0.8.0",
+    "@nuxt/image": "^1.8.0",
+    "@nuxt/ui": "^2.18.4",
+    "@nuxtjs/i18n": "^8.5.3",
+    "@nuxtjs/seo": "2.0.0-rc.21",
+    "@vueuse/nuxt": "^11.1.0",
+    "nuxt": "^3.13.2",
+    "nuxt-auth-utils": "^0.3.8",
+    "pm2": "^5.4.2",
+    "vue": "^3.5.6",
+    "vue-router": "^4.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@dethdkn/eslint-config": "^1.5.17",
+    "eslint": "^9.10.0",
+    "vue-tsc": "^2.1.6"
+  }
+}
