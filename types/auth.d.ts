@@ -1,7 +1,10 @@
+type Levels = 'admin' | 'user'
+
 declare module '#auth-utils' {
   interface User{
-    usuario: string,
+    username: string,
+    level: Levels,
   }
 }
 
-export {}
+export { Levels }

@@ -1,1 +1,13 @@
-{}
+{
+  "api": {
+    "user_password_incorrect": "Usuário/Senha incorretos",
+    "authenticated_successfully": "Autenticado com sucesso",
+    "no_permission": "Você não tem permissão para acessar este recurso",
+    "user_not_found": "Usuário não encontrado",
+    "user_deleted_successfully": "Usuário excluído com sucesso",
+    "user_already_registered": "Usuário já registrado",
+    "user_registered_successfully": "Usuário registrado com sucesso",
+    "password_successfully_modified": "Senha modificada com sucesso",
+    "user_successfully_modified": "Usuário modificado com sucesso"
+  }
+}

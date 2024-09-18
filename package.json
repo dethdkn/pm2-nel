@@ -1,7 +1,7 @@
 {
   "name": "pm2-horus",
   "type": "module",
-  "version": "0.01",
+  "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@9.9.0",
   "scripts": {
@@ -12,15 +12,20 @@
     "postinstall": "nuxt prepare",
     "typecheck": "nuxi typecheck",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "user:utils": "node extra/user.js"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.8.0",
     "@nuxt/image": "^1.8.0",
-    "@nuxt/ui": "^2.18.4",
+    "@nuxt/ui": "^2.18.5",
     "@nuxtjs/i18n": "^8.5.3",
     "@nuxtjs/seo": "2.0.0-rc.21",
     "@vueuse/nuxt": "^11.1.0",
+    "consola": "^3.2.3",
+    "dotenv": "^16.4.5",
+    "ldap-passwords": "^3.0.3",
+    "mongoose": "^8.6.3",
     "nuxt": "^3.13.2",
     "nuxt-auth-utils": "^0.3.8",
     "pm2": "^5.4.2",

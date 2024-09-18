@@ -13,6 +13,7 @@ export default defineNuxtConfig({
       { code: 'en', language: 'en-US', name: 'English (US)', file: 'en-US.json' },
       { code: 'pt', language: 'pt-BR', name: 'Português (BR)', file: 'pt-BR.json' },
     ],
+    experimental: { localeDetector: './server/localeDetector.ts' },
   },
   site: {
     url: SITE_URL,
@@ -23,7 +24,7 @@ export default defineNuxtConfig({
   robots: { disallow: '*' },
   sitemap: { enabled: false },
   linkChecker: { enabled: false },
-  nitro: { experimental: { tasks: true } },
+  runtimeConfig: { mongoUrl: '' },
   devtools: { enabled: true },
   compatibilityDate: '2024-09-08',
 })

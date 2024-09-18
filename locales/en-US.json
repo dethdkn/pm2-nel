@@ -1,1 +1,13 @@
-{}
+{
+  "api": {
+    "user_password_incorrect": "Username/Password is incorrect",
+    "authenticated_successfully": "Authenticated successfully",
+    "no_permission": "You don't have permission to access this resource",
+    "user_not_found": "User not found",
+    "user_deleted_successfully": "User deleted successfully",
+    "user_already_registered": "User already registered",
+    "user_registered_successfully": "User registered successfully",
+    "password_successfully_modified": "Password successfully modified",
+    "user_successfully_modified": "User successfully modified"
+  }
+}
