@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@9.9.0",
+  "description": "🎯 PM2 plus open source alternative",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",

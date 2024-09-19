@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   site: {
     url: SITE_URL,
     name: 'Nel',
-    description: 'PM2 plus alternative',
+    description: '🎯 PM2 plus open source alternative',
     defaultLocale: 'en',
   },
   robots: { disallow: '*' },
