@@ -14,7 +14,7 @@ if(!NUXT_MONGO_URL){
   process.exit(1)
 }
 
-mongoose.connect(NUXT_MONGO_URL, { dbName: 'pm2-horus' })
+mongoose.connect(NUXT_MONGO_URL, { dbName: 'pm2-nel' })
 
 const User = mongoose.model('user', new Schema({
   name: { type: String, required: true },

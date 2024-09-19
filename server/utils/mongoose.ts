@@ -3,7 +3,7 @@ import type { Users } from '~/schemas/user'
 
 const { mongoUrl } = useRuntimeConfig()
 
-mongoose.connect(mongoUrl, { dbName: 'pm2-horus' })
+mongoose.connect(mongoUrl, { dbName: 'pm2-nel' })
 
 export const User = mongoose.model('user', new Schema<Users>({
   name: { type: String, required: true },

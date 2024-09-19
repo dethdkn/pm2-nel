@@ -18,7 +18,7 @@ export default defineNuxtConfig({
   },
   site: {
     url: SITE_URL,
-    name: 'Horus',
+    name: 'Nel',
     description: 'PM2 plus alternative',
     defaultLocale: 'en',
   },
