@@ -3,6 +3,7 @@ import process from 'node:process'
 const { SITE_URL } = process.env
 
 export default defineNuxtConfig({
+  future: { compatibilityVersion: 4 },
   modules: ['@nuxt/fonts', '@nuxt/image', '@nuxt/ui', '@nuxtjs/seo', '@nuxtjs/i18n', '@vueuse/nuxt', 'nuxt-auth-utils'],
   app: { head: { templateParams: { separator: '•' } } },
   i18n: {
