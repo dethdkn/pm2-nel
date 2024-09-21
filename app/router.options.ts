@@ -1,5 +1,4 @@
-/* eslint-disable no-restricted-globals */
-/* eslint-disable typescript/no-explicit-any */
+/* eslint-disable no-restricted-globals, typescript/no-explicit-any */
 import type { RouterConfig } from '@nuxt/schema'
 
 const RouteOptions: RouterConfig = {

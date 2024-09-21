@@ -1,4 +1,23 @@
 {
+  "general": {
+    "title": "PM2 Nel",
+    "system": "Sistema",
+    "light": "Claro",
+    "dark": "Escuro"
+  },
+  "nav": {
+    "home": "Início",
+    "apps": "Aplicações",
+    "users": "Usuários",
+    "logs": "Logs",
+    "loggedin": "Logado como",
+    "logout": "Sair"
+  },
+  "login": {
+    "title": "Login",
+    "username": "Usuário",
+    "password": "Senha"
+  },
   "api": {
     "user_password_incorrect": "Usuário/Senha incorretos",
     "authenticated_successfully": "Autenticado com sucesso",

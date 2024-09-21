@@ -1,4 +1,23 @@
 {
+  "general": {
+    "title": "PM2 Nel",
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "nav": {
+    "home": "Home",
+    "apps": "Applications",
+    "users": "Users",
+    "logs": "Logs",
+    "loggedin": "Logged in as",
+    "logout": "Logout"
+  },
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password"
+  },
   "api": {
     "user_password_incorrect": "Username/Password is incorrect",
     "authenticated_successfully": "Authenticated successfully",

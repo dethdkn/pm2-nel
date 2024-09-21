@@ -11,8 +11,8 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     langDir: 'locales',
     locales: [
-      { code: 'en', language: 'en-US', name: 'English (US)', file: 'en-US.json' },
-      { code: 'pt', language: 'pt-BR', name: 'Português (BR)', file: 'pt-BR.json' },
+      { code: 'en', language: 'en-US', name: 'English (US)', flag: 'flag:us-4x3', file: 'en-US.json' },
+      { code: 'pt', language: 'pt-BR', name: 'Português (BR)', flag: 'flag:br-4x3', file: 'pt-BR.json' },
     ],
     experimental: { localeDetector: './server/localeDetector.ts' },
   },

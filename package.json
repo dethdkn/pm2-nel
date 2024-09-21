@@ -17,10 +17,12 @@
     "user:utils": "node extra/user.js"
   },
   "dependencies": {
+    "@iconify-json/flag": "^1.2.0",
+    "@iconify-json/heroicons": "^1.2.0",
     "@nuxt/fonts": "^0.8.0",
     "@nuxt/image": "^1.8.0",
     "@nuxt/ui": "^2.18.5",
-    "@nuxtjs/i18n": "^8.5.3",
+    "@nuxtjs/i18n": "^8.5.4",
     "@nuxtjs/seo": "2.0.0-rc.21",
     "@vueuse/nuxt": "^11.1.0",
     "consola": "^3.2.3",
@@ -28,15 +30,15 @@
     "ldap-passwords": "^3.0.3",
     "mongoose": "^8.6.3",
     "nuxt": "^3.13.2",
-    "nuxt-auth-utils": "^0.3.8",
+    "nuxt-auth-utils": "^0.3.9",
     "pm2": "^5.4.2",
-    "vue": "^3.5.6",
+    "vue": "^3.5.7",
     "vue-router": "^4.4.5",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@dethdkn/eslint-config": "^1.5.17",
-    "eslint": "^9.10.0",
+    "eslint": "^9.11.0",
     "vue-tsc": "^2.1.6"
   }
 }
