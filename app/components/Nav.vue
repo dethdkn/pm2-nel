@@ -2,13 +2,15 @@
 const { user, clear } = useUserSession()
 const { t } = useI18n()
 const colorMode = useColorMode()
+const passwordModal = usePasswordModal()
 
 const themeMenu = useThemeMenu()
 const langMenu = useLangMenu()
 
 const userMenu = computed(() => [
-  [{ label: user.value?.username || 'username', icon: 'i-heroicons-user-circle-20-solid', disabled: true }],
+  [{ label: `${user.value?.username} | ${user.value?.level === 'admin' ? t('general.admin') : t('general.user')}`, icon: 'i-heroicons-user-circle-20-solid', disabled: true }],
   [
+    { icon: 'i-heroicons-key-20-solid', label: t('nav.update_password'), click: () => passwordModal.value = true },
     { icon: 'i-heroicons-arrow-right-start-on-rectangle-20-solid', label: t('nav.logout'), click: async () => {
       await clear()
       await navigateTo('/login')

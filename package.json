@@ -22,7 +22,7 @@
     "@nuxt/fonts": "^0.8.0",
     "@nuxt/image": "^1.8.0",
     "@nuxt/ui": "^2.18.5",
-    "@nuxtjs/i18n": "^8.5.4",
+    "@nuxtjs/i18n": "^8.5.5",
     "@nuxtjs/seo": "2.0.0-rc.21",
     "@vueuse/nuxt": "^11.1.0",
     "consola": "^3.2.3",

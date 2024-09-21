@@ -3,7 +3,14 @@
     "title": "PM2 Nel",
     "system": "System",
     "light": "Light",
-    "dark": "Dark"
+    "dark": "Dark",
+    "admin": "Administrator",
+    "user": "User",
+    "actions": "Actions",
+    "search": "Search...",
+    "loading": "Loading...",
+    "cancel": "Cancel",
+    "unknown_error": "Unknown error"
   },
   "nav": {
     "home": "Home",
@@ -11,12 +18,30 @@
     "users": "Users",
     "logs": "Logs",
     "loggedin": "Logged in as",
+    "update_password": "Update Password",
     "logout": "Logout"
   },
   "login": {
     "title": "Login",
     "username": "Username",
     "password": "Password"
+  },
+  "users": {
+    "title": "Users",
+    "username": "Username",
+    "password": "Password",
+    "level": "Level",
+    "update_users": "Update Users",
+    "new_user": "New User",
+    "no_users": "No users found",
+    "edit_user": "Edit User",
+    "delete_user": "Delete User",
+    "create": "Create",
+    "delete": "Delete",
+    "delete_confirm": "Are you sure you want to delete {username}?",
+    "edit": "Edit",
+    "confirm_password": "Confirm Password",
+    "update": "Update"
   },
   "api": {
     "user_password_incorrect": "Username/Password is incorrect",

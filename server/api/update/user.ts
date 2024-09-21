@@ -10,9 +10,11 @@ export default defineEventHandler(async event => {
 
   const body = await readValidatedBody(event, UpdateUserSchema.safeParse)
 
-  if(!body.success) throw createError({ status: 401, message: t(body.error.errors[0].message) })
+  if(!body.success) throw createError({ status: 401, message: t(body.error.errors[0]?.message || 'general.unknown_error') })
 
   const { id, name, password, level } = body.data
+
+  if(user.username === name) throw createError({ status: 401, message: t('api.no_permission') })
 
   const u = await User.findById(id)
 

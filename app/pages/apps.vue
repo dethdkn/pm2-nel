@@ -3,5 +3,7 @@
 </script>
 
 <template>
-  <div>apps</div>
+  <section class="mx-auto max-w-7xl px-4">
+    <div>apps</div>
+  </section>
 </template>
