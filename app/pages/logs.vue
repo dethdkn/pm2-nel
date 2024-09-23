@@ -8,7 +8,7 @@ useHead({ title: t('logs.title') })
 
 interface Log{ type: 'err' | 'out' | 'pm2', process_id: number, app_name: string, message: string, timestamp: string }
 
-const { data, open } = useEventSource('/api/logs', [], { immediate: false, autoReconnect: true })
+const { data, open } = useEventSource('/api/fetch/logs', [], { immediate: false, autoReconnect: true })
 onNuxtReady(() => open())
 
 const logDiv = ref<HTMLElement | null>(null)
