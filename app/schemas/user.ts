@@ -19,7 +19,7 @@ export const UserSchema = z.object({
 export type Users = z.infer<typeof UserSchema>
 
 export const UpdateUserSchema = UserSchema.extend({
-  id: z.string().min(1),
+  id: z.number().min(1),
   password: z.string().optional().refine(v => v === undefined || v === '' || validatePass(v)),
 })
 

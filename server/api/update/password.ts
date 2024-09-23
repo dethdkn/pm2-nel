@@ -1,3 +1,4 @@
+import { eq } from 'drizzle-orm'
 import { sha512Crypt } from 'ldap-passwords'
 import { PasswordSchema } from '~/schemas/user'
 
@@ -12,12 +13,11 @@ export default defineEventHandler(async event => {
 
   const { password } = body.data
 
-  const u = await User.findOne({ name: user.username })
+  const [u] = await drizzle.select().from(Users).where(eq(Users.name, user.username))
 
   if(!u) throw createError({ status: 401, message: t('api.user_not_found') })
 
-  u.password = sha512Crypt(password)
-  await u.save()
+  await drizzle.update(Users).set({ password: sha512Crypt(password) }).where(eq(Users.name, user.username))
 
   return t('api.password_successfully_modified')
 })

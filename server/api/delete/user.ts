@@ -1,3 +1,4 @@
+import { eq } from 'drizzle-orm'
 import { IdSchema } from '~/schemas/id'
 
 export default defineEventHandler(async event => {
@@ -13,11 +14,11 @@ export default defineEventHandler(async event => {
 
   const { id } = body.data
 
-  const u = await User.findById(id)
+  const [u] = await drizzle.select().from(Users).where(eq(Users.id, id))
 
   if(!u) throw createError({ status: 401, message: t('api.user_not_found') })
 
-  await u.deleteOne()
+  await drizzle.delete(Users).where(eq(Users.id, id))
 
   return t('api.user_deleted_successfully')
 })

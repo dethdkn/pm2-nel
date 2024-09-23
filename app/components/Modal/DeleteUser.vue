@@ -7,11 +7,11 @@ const toast = useToast()
 const { start, finish, isLoading } = useLoadingIndicator()
 
 const model = defineModel<boolean>()
-const id = defineModel<string>('id')
+const id = defineModel<number>('id')
 const username = defineModel<string>('username')
 watch(model, nv => {
   if(!nv){
-    id.value = ''
+    id.value = 0
     username.value = ''
   }
 })

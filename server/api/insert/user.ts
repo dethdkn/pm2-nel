@@ -1,3 +1,4 @@
+import { eq } from 'drizzle-orm'
 import { sha512Crypt } from 'ldap-passwords'
 import { UserSchema } from '~/schemas/user'
 
@@ -14,11 +15,11 @@ export default defineEventHandler(async event => {
 
   const { name, password, level } = body.data
 
-  const alreadyExist = await User.findOne({ name })
+  const [alreadyExist] = await drizzle.select().from(Users).where(eq(Users.name, name))
 
   if(alreadyExist) throw createError({ status: 401, message: t('api.user_already_registered') })
 
-  await new User({ name, password: sha512Crypt(password), level }).save()
+  await drizzle.insert(Users).values({ name, password: sha512Crypt(password), level })
 
   return t('api.user_registered_successfully')
 })

@@ -7,7 +7,7 @@ const toast = useToast()
 const { start, finish, isLoading } = useLoadingIndicator()
 
 const model = defineModel<boolean>()
-const id = defineModel<string>('id')
+const id = defineModel<number>('id')
 const username = defineModel<string>('username')
 const password = ref('')
 const level = defineModel<string>('level')
@@ -19,7 +19,7 @@ const levels = computed(() => [
 
 watch(model, nv => {
   if(!nv){
-    id.value = ''
+    id.value = 0
     username.value = ''
     password.value = ''
     level.value = 'user'

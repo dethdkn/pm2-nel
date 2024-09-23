@@ -22,19 +22,19 @@ const pending = computed(() => status.value === 'pending')
 const newUserModal = ref(false)
 
 const deleteUserModal = ref(false)
-const deleteID = ref('')
+const deleteID = ref(0)
 const deleteUsername = ref('')
-function openDeleteUserModal(id: string, username: string){
+function openDeleteUserModal(id: number, username: string){
   deleteID.value = id
   deleteUsername.value = username
   deleteUserModal.value = true
 }
 
 const editUserModal = ref(false)
-const editID = ref('')
+const editID = ref(0)
 const editUsername = ref('')
 const editLevel = ref('')
-function openEditUserModal(id: string, username: string, level: string){
+function openEditUserModal(id: number, username: string, level: string){
   editID.value = id
   editUsername.value = username
   editLevel.value = level
@@ -63,10 +63,10 @@ function openEditUserModal(id: string, username: string, level: string){
         <div class="flex items-center space-x-2">
           <ClientOnly>
             <UTooltip :text="t('users.edit_user')" :popper="{ placement: 'top' }">
-              <UButton icon="i-heroicons-pencil-square-20-solid" size="2xs" color="blue" variant="soft" :ui="{ rounded: 'rounded-full' }" :disabled="row.name === user?.username" @click="openEditUserModal(row._id, row.name, row.level)" />
+              <UButton icon="i-heroicons-pencil-square-20-solid" size="2xs" color="blue" variant="soft" :ui="{ rounded: 'rounded-full' }" :disabled="row.name === user?.username" @click="openEditUserModal(row.id, row.name, row.level)" />
             </UTooltip>
             <UTooltip :text="t('users.delete_user')" :popper="{ placement: 'top' }">
-              <UButton icon="i-heroicons-trash-20-solid" size="2xs" color="red" variant="soft" :ui="{ rounded: 'rounded-full' }" :disabled="row.name === user?.username" @click="openDeleteUserModal(row._id, row.name)" />
+              <UButton icon="i-heroicons-trash-20-solid" size="2xs" color="red" variant="soft" :ui="{ rounded: 'rounded-full' }" :disabled="row.name === user?.username" @click="openDeleteUserModal(row.id, row.name)" />
             </UTooltip>
             <template #fallback>
               <div class="size-6 animate-pulse rounded-full bg-blue-100 dark:bg-blue-900" />

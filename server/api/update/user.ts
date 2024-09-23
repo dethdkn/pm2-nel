@@ -1,3 +1,4 @@
+import { eq } from 'drizzle-orm'
 import { sha512Crypt } from 'ldap-passwords'
 import { UpdateUserSchema } from '~/schemas/user'
 
@@ -16,7 +17,7 @@ export default defineEventHandler(async event => {
 
   if(user.username === name) throw createError({ status: 401, message: t('api.no_permission') })
 
-  const u = await User.findById(id)
+  const [u] = await drizzle.select().from(Users).where(eq(Users.id, id))
 
   if(!u) throw createError({ status: 401, message: t('api.user_not_found') })
 
@@ -24,7 +25,11 @@ export default defineEventHandler(async event => {
   if(password) u.password = sha512Crypt(password)
   if(u.level !== level) u.level = level
 
-  await u.save()
+  await drizzle.update(Users).set({
+    name: name || u.name,
+    password: password ? sha512Crypt(password) : u.password,
+    level: level || u.level,
+  }).where(eq(Users.id, id))
 
   return t('api.user_successfully_modified')
 })

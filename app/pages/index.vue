@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-
+useHead({ title: 'PM2 nel' })
 </script>
 
 <template>

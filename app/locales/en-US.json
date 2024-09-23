@@ -22,6 +22,7 @@
     "logout": "Logout"
   },
   "login": {
+    "full_title": "Login • PM2 Nel",
     "title": "Login",
     "username": "Username",
     "password": "Password"

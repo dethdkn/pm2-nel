@@ -1,3 +1,4 @@
+import { eq } from 'drizzle-orm'
 import { verifySha512Crypt } from 'ldap-passwords'
 import { AuthSchema } from '~/schemas/auth'
 
@@ -10,7 +11,7 @@ export default defineEventHandler(async event => {
 
   const { username, password } = body.data
 
-  const user = await User.findOne({ name: username })
+  const [user] = await drizzle.select().from(Users).where(eq(Users.name, username))
 
   if(!user) throw createError({ status: 401, message: t('api.user_password_incorrect') })
 

@@ -1,3 +1,4 @@
+import { asc, desc, ilike, isNotNull, or } from 'drizzle-orm'
 import { SearchUserSchema } from '~/schemas/user'
 
 export default defineEventHandler(async event => {
@@ -13,12 +14,9 @@ export default defineEventHandler(async event => {
 
   const { page, search, sort } = body.data
 
-  const q = search ? { $or: [{ name: { $regex: search, $options: 'i' } }, { email: { $regex: search, $options: 'i' } }] } : {}
+  const sortCol = sort.column === 'level' ? Users.level : Users.name
 
-  const sortOption: Record<string, -1 | 1> = {}
-  sortOption[sort.column] = sort.direction === 'asc' ? 1 : -1
-
-  const allUsers = await User.find(q, { password: 0 }).sort(sortOption).lean()
+  const allUsers = await drizzle.select().from(Users).where(search ? or(ilike(Users.name, search), ilike(Users.level, search)) : isNotNull(Users.id)).orderBy(sort.direction === 'asc' ? asc(sortCol) : desc(sortCol))
 
   const total = allUsers.length
 

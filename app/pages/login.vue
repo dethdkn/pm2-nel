@@ -9,7 +9,7 @@ const colorMode = useColorMode()
 const themeMenu = useThemeMenu()
 const langMenu = useLangMenu()
 
-useHead({ title: t('login.title') })
+useHead({ title: t('login.full_title') })
 definePageMeta({ layout: false })
 
 const state = ref<Auth>({ username: '', password: '' })
