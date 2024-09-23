@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@9.11.0",
   "description": "🎯 PM2 plus open source alternative",
   "scripts": {
     "build": "nuxt build",
@@ -20,7 +20,7 @@
     "@iconify-json/heroicons": "^1.2.0",
     "@nuxt/fonts": "^0.8.0",
     "@nuxt/image": "^1.8.0",
-    "@nuxt/ui": "^2.18.5",
+    "@nuxt/ui": "^2.18.6",
     "@nuxtjs/i18n": "^8.5.5",
     "@vueuse/nuxt": "^11.1.0",
     "better-sqlite3": "^11.3.0",

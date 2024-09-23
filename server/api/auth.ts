@@ -1,4 +1,3 @@
-import { eq } from 'drizzle-orm'
 import { verifySha512Crypt } from 'ldap-passwords'
 import { AuthSchema } from '~/schemas/auth'
 

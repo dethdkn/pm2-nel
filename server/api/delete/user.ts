@@ -1,4 +1,3 @@
-import { eq } from 'drizzle-orm'
 import { IdSchema } from '~/schemas/id'
 
 export default defineEventHandler(async event => {

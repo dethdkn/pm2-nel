@@ -11,7 +11,12 @@ export default defineNuxtConfig({
     experimental: { localeDetector: './server/localeDetector.ts' },
   },
   runtimeConfig: { mongoUrl: '' },
-  nitro: { experimental: { database: true, tasks: true, websocket: true } },
+  nitro: {
+    imports: { presets: [
+      { from: 'drizzle-orm', imports: ['eq', 'asc', 'desc', 'ilike', 'isNotNull', 'or'] },
+    ] },
+    experimental: { database: true, tasks: true, websocket: true },
+  },
   devtools: { enabled: true },
   compatibilityDate: '2024-09-08',
 })

@@ -1,4 +1,3 @@
-import { asc, desc, ilike, isNotNull, or } from 'drizzle-orm'
 import { SearchUserSchema } from '~/schemas/user'
 
 export default defineEventHandler(async event => {

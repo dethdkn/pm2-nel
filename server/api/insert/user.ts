@@ -1,4 +1,3 @@
-import { eq } from 'drizzle-orm'
 import { sha512Crypt } from 'ldap-passwords'
 import { UserSchema } from '~/schemas/user'
 
