@@ -5,6 +5,18 @@
   "private": true,
   "packageManager": "pnpm@9.11.0",
   "description": "🎯 PM2 plus open source alternative",
+  "author": {
+    "name": "Gabriel 'DethDKN' Rosa",
+    "email": "gabriel@rosa.dev.br",
+    "url": "https://rosa.dev.br"
+  },
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/dethdkn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dethdkn/pm2-nel.git"
+  },
+  "bugs": "https://github.com/dethdkn/pm2-nel/issues",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
