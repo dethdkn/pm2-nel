@@ -30,12 +30,12 @@ export function pm2List(){
   })
 }
 
-export function pm2Details(pid: number){
+export function pm2Details(name: string){
   return new Promise<PM2Details[]>((resolve, reject) => {
     pm2.connect(err => {
       if(err) return reject(err)
 
-      pm2.describe(pid, (err, apps) => {
+      pm2.describe(name, (err, apps) => {
         pm2.disconnect()
         if(err) return reject(err)
 
