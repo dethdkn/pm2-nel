@@ -44,6 +44,9 @@
     "confirm_password": "Confirmar Senha",
     "update": "Atualizar"
   },
+  "logs": {
+    "title": "Logs"
+  },
   "api": {
     "user_password_incorrect": "Usuário/Senha incorretos",
     "authenticated_successfully": "Autenticado com sucesso",

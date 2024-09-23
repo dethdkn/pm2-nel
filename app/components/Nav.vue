@@ -19,10 +19,10 @@ const userMenu = computed(() => [
 ])
 
 const routes = computed(() => [
-  { path: '/', label: t('nav.home') },
-  { path: '/apps', label: t('nav.apps') },
-  { path: '/users', label: t('nav.users') },
-  { path: '/logs', label: t('nav.logs') },
+  { to: '/', label: t('nav.home') },
+  { to: '/apps', label: t('nav.apps') },
+  { to: '/users', label: t('nav.users'), admin: true },
+  { to: '/logs', label: t('nav.logs') },
 ])
 
 const menuClosed = ref(true)
@@ -54,11 +54,13 @@ const menuClosed = ref(true)
       </div>
       <div class="w-full items-center justify-between lg:order-1 lg:flex lg:w-auto" :class="{ hidden: menuClosed }">
         <ul class="mt-4 flex flex-col space-y-1 rounded-lg border border-gray-200 bg-white p-4 font-medium lg:mt-0 lg:flex-row lg:space-x-8 lg:space-y-0 lg:border-0 lg:p-0 dark:border-gray-800 dark:bg-slate-900">
-          <li v-for="route in routes" :key="route.path">
-            <NuxtLinkLocale :to="route.path" class="block rounded py-2 pl-3 pr-4 text-slate-700 transition-all duration-300 hover:bg-slate-100 lg:p-0 lg:hover:bg-transparent lg:hover:text-green-500 dark:border-gray-700 dark:text-slate-200 dark:hover:bg-slate-800 lg:dark:hover:bg-transparent lg:dark:hover:text-green-500" active-class="!text-white dark:!text-slate-900 hover:!text-white dark:hover:!text-slate-900 bg-green-500 dark:bg-green-400 hover:!bg-green-500 dark:hover:!bg-green-400 lg:!bg-transparent dark:lg:!bg-transparent lg:hover:!bg-transparent dark:lg:hover:!bg-transparent lg:!text-green-500 lg:dark:!text-green-400 lg:hover:!text-green-500 lg:dark:hover:!text-green-400" @click="menuClosed = true">
-              {{ route.label }}
-            </NuxtLinkLocale>
-          </li>
+          <template v-for="{admin, to, label} in routes" :key="to">
+            <li v-if="!admin || user?.level === 'admin'">
+              <NuxtLinkLocale :to class="block rounded py-2 pl-3 pr-4 text-slate-700 transition-all duration-300 hover:bg-slate-100 lg:p-0 lg:hover:bg-transparent lg:hover:text-green-500 dark:border-gray-700 dark:text-slate-200 dark:hover:bg-slate-800 lg:dark:hover:bg-transparent lg:dark:hover:text-green-500" active-class="!text-white dark:!text-slate-900 hover:!text-white dark:hover:!text-slate-900 bg-green-500 dark:bg-green-400 hover:!bg-green-500 dark:hover:!bg-green-400 lg:!bg-transparent dark:lg:!bg-transparent lg:hover:!bg-transparent dark:lg:hover:!bg-transparent lg:!text-green-500 lg:dark:!text-green-400 lg:hover:!text-green-500 lg:dark:hover:!text-green-400" @click="menuClosed = true">
+                {{ label }}
+              </NuxtLinkLocale>
+            </li>
+          </template>
         </ul>
       </div>
     </div>

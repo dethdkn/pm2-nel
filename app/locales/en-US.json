@@ -44,6 +44,9 @@
     "confirm_password": "Confirm Password",
     "update": "Update"
   },
+  "logs": {
+    "title": "Logs"
+  },
   "api": {
     "user_password_incorrect": "Username/Password is incorrect",
     "authenticated_successfully": "Authenticated successfully",
