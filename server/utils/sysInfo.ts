@@ -1,7 +1,8 @@
 import os from 'node:os'
 import process from 'node:process'
+import type { SysInfo } from '~/types/sys'
 
-export default function(){
+export default function(): SysInfo{
   const hostname = os.hostname()
   const platform = os.platform()
 

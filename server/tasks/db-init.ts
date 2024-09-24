@@ -10,8 +10,8 @@ export default defineTask({
       level TEXT CHECK(level IN ('admin', 'user')) NOT NULL
     )`
 
-    const isEmpty = (await drizzle.select().from(Users).all()).length
-    if(isEmpty === 0) await drizzle.insert(Users).values({ name: 'nel', password: sha512Crypt('@PM2-nel'), level: 'admin' })
+    const isEmpty = (await drizzle.select().from(Users).all()).length === 0
+    if(isEmpty) await drizzle.insert(Users).values({ name: 'nel', password: sha512Crypt('@PM2-nel'), level: 'admin' })
 
     return { result: 'ok' }
   },

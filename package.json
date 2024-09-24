@@ -30,7 +30,7 @@
   "dependencies": {
     "@iconify-json/flag": "^1.2.0",
     "@iconify-json/heroicons": "^1.2.0",
-    "@nuxt/fonts": "^0.8.0",
+    "@nuxt/fonts": "^0.9.0",
     "@nuxt/image": "^1.8.0",
     "@nuxt/ui": "^2.18.6",
     "@nuxtjs/i18n": "^8.5.5",
@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@dethdkn/eslint-config": "^1.5.17",
-    "eslint": "^9.11.0",
+    "eslint": "^9.11.1",
     "vue-tsc": "^2.1.6"
   }
 }

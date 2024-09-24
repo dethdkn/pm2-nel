@@ -5,10 +5,9 @@ export default defineEventHandler(async event => {
 
   const eventStream = createEventStream(event)
 
-  const interval = setInterval(async () => {
-    const apps = await pm2List()
-    eventStream.push(JSON.stringify(apps))
-  }, 5000)
+  eventStream.push(JSON.stringify(await pm2List()))
+
+  const interval = setInterval(async () => eventStream.push(JSON.stringify(await pm2List())), 5000)
 
   eventStream.onClosed(async () => {
     clearInterval(interval)

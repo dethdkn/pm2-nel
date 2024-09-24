@@ -5,10 +5,9 @@ export default defineEventHandler(async event => {
 
   const eventStream = createEventStream(event)
 
-  const interval = setInterval(() => {
-    const sys = sysInfo()
-    eventStream.push(JSON.stringify(sys))
-  }, 5000)
+  eventStream.push(JSON.stringify(sysInfo()))
+
+  const interval = setInterval(() => eventStream.push(JSON.stringify(sysInfo())), 5000)
 
   eventStream.onClosed(async () => {
     clearInterval(interval)
