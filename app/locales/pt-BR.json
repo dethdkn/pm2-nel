@@ -17,7 +17,6 @@
     "apps": "Aplicações",
     "users": "Usuários",
     "logs": "Logs",
-    "loggedin": "Logado como",
     "update_password": "Atualizar Senha",
     "logout": "Sair"
   },
@@ -29,7 +28,6 @@
   },
   "apps": {
     "full_title": "Aplicações • PM2 Nel",
-    "title": "Aplicações",
     "id": "ID",
     "instances": "Instâncias",
     "cpu": "CPU",
@@ -56,7 +54,6 @@
   },
   "users": {
     "full_title": "Usuários • PM2 Nel",
-    "title": "Usuários",
     "username": "Usuário",
     "password": "Senha",
     "level": "Nível",
@@ -70,13 +67,10 @@
     "delete_confirm": "Tem certeza de que deseja excluir {username}?",
     "edit": "Editar",
     "confirm_password": "Confirmar Senha",
-    "update": "Atualizar",
-    "reload_app": "Recarregar Aplicativo",
-    "reload_app_confirmation": "Tem certeza de que deseja recarregar {name}?"
+    "update": "Atualizar"
   },
   "logs": {
-    "full_title": "Logs • PM2 Nel",
-    "title": "Logs"
+    "full_title": "Logs • PM2 Nel"
   },
   "api": {
     "user_password_incorrect": "Usuário/Senha incorretos",

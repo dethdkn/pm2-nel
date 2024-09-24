@@ -4,6 +4,6 @@ useHead({ title: 'PM2 nel' })
 
 <template>
   <section class="mx-auto max-w-7xl px-4">
-    <div>home</div>
+    <div>-</div>
   </section>
 </template>

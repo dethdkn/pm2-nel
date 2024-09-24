@@ -7,7 +7,7 @@ export default function(): SysInfo{
   const platform = os.platform()
 
   const cpus = os.cpus()
-  const cpuName = cpus[0].model
+  const cpuName = cpus[0]?.model || ''
   const numberOfCores = cpus.length
 
   const totalMemory = bytesToGb(os.totalmem())

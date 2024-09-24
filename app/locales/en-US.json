@@ -17,7 +17,6 @@
     "apps": "Applications",
     "users": "Users",
     "logs": "Logs",
-    "loggedin": "Logged in as",
     "update_password": "Update Password",
     "logout": "Logout"
   },
@@ -29,7 +28,6 @@
   },
   "apps": {
     "full_title": "Applications • PM2 Nel",
-    "title": "Applications",
     "id": "ID",
     "instances": "Instances",
     "cpu": "CPU",
@@ -56,7 +54,6 @@
   },
   "users": {
     "full_title": "Users • PM2 Nel",
-    "title": "Users",
     "username": "Username",
     "password": "Password",
     "level": "Level",
@@ -73,8 +70,7 @@
     "update": "Update"
   },
   "logs": {
-    "full_title": "Logs • PM2 Nel",
-    "title": "Logs"
+    "full_title": "Logs • PM2 Nel"
   },
   "api": {
     "user_password_incorrect": "Username/Password is incorrect",

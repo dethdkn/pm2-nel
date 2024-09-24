@@ -1,6 +1,6 @@
 /* eslint-disable promise/prefer-await-to-callbacks */
 import pm2 from 'pm2'
-import { PM2Details, PM2Process } from '~/types/pm2'
+import type { PM2Details, PM2Process } from '~/types/pm2'
 
 export function pm2List(){
   return new Promise<PM2Process[]>((resolve, reject) => {
@@ -23,18 +23,16 @@ export function pm2List(){
         }))
 
         const mergedProcesses: PM2Process[] = []
-        const processByName: Record<string, PM2Process> = {}
 
         for(const p of process){
-          if(!processByName[p.name]) processByName[p.name] = { ...p }
-          else {
-            processByName[p.name].pm_id = [...processByName[p.name].pm_id, ...p.pm_id]
-            processByName[p.name].cpu += p.cpu
-            processByName[p.name].ram += p.ram
+          const existingProcess = mergedProcesses.find(mp => mp.name === p.name)
+          if(existingProcess){
+            existingProcess.pm_id = [...existingProcess.pm_id, ...p.pm_id]
+            existingProcess.cpu += p.cpu
+            existingProcess.ram += p.ram
           }
+          else mergedProcesses.push(p)
         }
-
-        for(const key in processByName) mergedProcesses.push({ ...processByName[key], ram: bytesToGb(processByName[key].ram), cpu: Number(processByName[key].cpu.toFixed(2)) })
 
         return resolve(mergedProcesses)
       })
