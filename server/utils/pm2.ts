@@ -33,6 +33,7 @@ export function pm2List(){
           }
           else mergedProcesses.push(p)
         }
+        for(const p of process) p.ram = bytesToGb(p.ram)
 
         return resolve(mergedProcesses)
       })
