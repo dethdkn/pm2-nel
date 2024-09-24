@@ -1,6 +1,6 @@
 export interface PM2Process{
   pid: number,
-  pm_id: number,
+  pm_id: number[],
   name: string,
   status: string,
   instances: 'max' | number,

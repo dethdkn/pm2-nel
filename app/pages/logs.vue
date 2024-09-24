@@ -4,7 +4,7 @@ import { destr } from 'destr'
 const { t, locale, locales } = useI18n()
 const localeCode = computed(() => locales.value.find(l => l.code === locale.value)?.language || 'en-US')
 
-useHead({ title: t('logs.title') })
+useHead({ title: t('logs.full_title') })
 
 interface Log{ type: 'err' | 'out' | 'pm2', process_id: number, app_name: string, message: string, timestamp: string }
 

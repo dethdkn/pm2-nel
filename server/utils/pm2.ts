@@ -13,16 +13,30 @@ export function pm2List(){
 
         const process: PM2Process[] = list.map(p => ({
           pid: p.pid || p.pid === 0 ? p.pid : -1,
-          pm_id: p.pm_id || p.pm_id === 0 ? p.pm_id : -1,
+          pm_id: p.pm_id || p.pm_id === 0 ? [p.pm_id] : [-1],
           name: p.name || '',
           status: p.pm2_env?.status || '',
           instances: p.pm2_env?.instances || 0,
           cpu: p.monit?.cpu || 0,
-          ram: bytesToGb(p.monit?.memory || 0),
+          ram: p.monit?.memory || 0,
           uptime: Number(((Date.now() - (p.pm2_env?.pm_uptime || 0)) / (1000 * 60 * 60)).toFixed(2)),
         }))
 
-        return resolve(process)
+        const mergedProcesses: PM2Process[] = []
+        const processByName: Record<string, PM2Process> = {}
+
+        for(const p of process){
+          if(!processByName[p.name]) processByName[p.name] = { ...p }
+          else {
+            processByName[p.name].pm_id = [...processByName[p.name].pm_id, ...p.pm_id]
+            processByName[p.name].cpu += p.cpu
+            processByName[p.name].ram += p.ram
+          }
+        }
+
+        for(const key in processByName) mergedProcesses.push({ ...processByName[key], ram: bytesToGb(processByName[key].ram), cpu: Number(processByName[key].cpu.toFixed(2)) })
+
+        return resolve(mergedProcesses)
       })
     })
   })
@@ -39,7 +53,7 @@ export function pm2Details(name: string){
 
         const details: PM2Details[] = apps.map(a => ({
           pid: a.pid || a.pid === 0 ? a.pid : -1,
-          pm_id: a.pm_id || a.pm_id === 0 ? a.pm_id : -1,
+          pm_id: a.pm_id || a.pm_id === 0 ? [a.pm_id] : [-1],
           name: a.name || '',
           status: a.pm2_env?.status || '',
           instances: a.pm2_env?.instances || -1,
@@ -56,6 +70,21 @@ export function pm2Details(name: string){
         }))
 
         return resolve(details)
+      })
+    })
+  })
+}
+
+export function pm2Start(name: string){
+  return new Promise<void>((resolve, reject) => {
+    pm2.connect(err => {
+      if(err) return reject(err)
+
+      pm2.start(name, err => {
+        pm2.disconnect()
+        if(err) return reject(err)
+
+        return resolve(void 0)
       })
     })
   })

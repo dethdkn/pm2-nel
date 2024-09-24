@@ -2,7 +2,7 @@
 const { t } = useI18n()
 const { user } = useUserSession()
 
-useHead({ title: t('users.title') })
+useHead({ title: t('users.full_title') })
 
 const columns = computed(() => [
   { key: 'name', label: t('users.username'), sortable: true },

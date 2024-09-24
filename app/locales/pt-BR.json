@@ -27,7 +27,35 @@
     "username": "Usuário",
     "password": "Senha"
   },
+  "apps": {
+    "full_title": "Aplicações • PM2 Nel",
+    "title": "Aplicações",
+    "id": "ID",
+    "instances": "Instâncias",
+    "cpu": "CPU",
+    "ram": "RAM",
+    "gb": "GB",
+    "uptime": "Tempo de atividade",
+    "hours": "horas",
+    "start": "Iniciar",
+    "reload": "Recarregar",
+    "restart": "Reiniciar",
+    "stop": "Parar",
+    "reload_app": "Recarregar Aplicativo",
+    "reload_app_confirmation": "Tem certeza de que deseja recarregar {name}?",
+    "start_app": "Iniciar Aplicativo",
+    "start_app_confirmation": "Tem certeza de que deseja iniciar {name}?",
+    "restart_app": "Reiniciar Aplicativo",
+    "restart_app_confirmation": "Tem certeza de que deseja reiniciar {name}?",
+    "stop_app": "Parar Aplicativo",
+    "stop_app_confirmation": "Tem certeza de que deseja parar {name}?",
+    "delete_app": "Excluir Aplicativo",
+    "delete_app_confirmation": "Tem certeza de que deseja excluir {name}?",
+    "delete": "Excluir",
+    "details": "Detalhes"
+  },
   "users": {
+    "full_title": "Usuários • PM2 Nel",
     "title": "Usuários",
     "username": "Usuário",
     "password": "Senha",
@@ -42,9 +70,12 @@
     "delete_confirm": "Tem certeza de que deseja excluir {username}?",
     "edit": "Editar",
     "confirm_password": "Confirmar Senha",
-    "update": "Atualizar"
+    "update": "Atualizar",
+    "reload_app": "Recarregar Aplicativo",
+    "reload_app_confirmation": "Tem certeza de que deseja recarregar {name}?"
   },
   "logs": {
+    "full_title": "Logs • PM2 Nel",
     "title": "Logs"
   },
   "api": {
@@ -56,6 +87,11 @@
     "user_already_registered": "Usuário já registrado",
     "user_registered_successfully": "Usuário registrado com sucesso",
     "password_successfully_modified": "Senha modificada com sucesso",
-    "user_successfully_modified": "Usuário modificado com sucesso"
+    "user_successfully_modified": "Usuário modificado com sucesso",
+    "user_successfully_started": "Usuário iniciado com sucesso",
+    "process_successfully_stoped": "Processo interrompido com sucesso",
+    "process_successfully_restarted": "Processo reiniciado com sucesso",
+    "process_successfully_reloaded": "Processo recarregado com sucesso",
+    "process_successfully_deleted": "Processo excluído com sucesso"
   }
 }

@@ -27,7 +27,35 @@
     "username": "Username",
     "password": "Password"
   },
+  "apps": {
+    "full_title": "Applications • PM2 Nel",
+    "title": "Applications",
+    "id": "ID",
+    "instances": "Instances",
+    "cpu": "CPU",
+    "ram": "RAM",
+    "gb": "GB",
+    "uptime": "Uptime",
+    "hours": "hours",
+    "start": "Start",
+    "reload": "Reload",
+    "restart": "Restart",
+    "stop": "Stop",
+    "reload_app": "Reload App",
+    "reload_app_confirmation": "Are you sure you want to reload {name}?",
+    "start_app": "Start App",
+    "start_app_confirmation": "Are you sure you want to start {name}?",
+    "restart_app": "Restart App",
+    "restart_app_confirmation": "Are you sure you want to restart {name}?",
+    "stop_app": "Stop App",
+    "stop_app_confirmation": "Are you sure you want to stop {name}?",
+    "delete_app": "Delete App",
+    "delete_app_confirmation": "Are you sure you want to delete {name}?",
+    "delete": "Delete",
+    "details": "Details"
+  },
   "users": {
+    "full_title": "Users • PM2 Nel",
     "title": "Users",
     "username": "Username",
     "password": "Password",
@@ -45,6 +73,7 @@
     "update": "Update"
   },
   "logs": {
+    "full_title": "Logs • PM2 Nel",
     "title": "Logs"
   },
   "api": {
@@ -56,6 +85,11 @@
     "user_already_registered": "User already registered",
     "user_registered_successfully": "User registered successfully",
     "password_successfully_modified": "Password successfully modified",
-    "user_successfully_modified": "User successfully modified"
+    "user_successfully_modified": "User successfully modified",
+    "user_successfully_started": "User successfully started",
+    "process_successfully_stoped": "Process successfully stoped",
+    "process_successfully_restarted": "Process successfully restarted",
+    "process_successfully_reloaded": "Process successfully reloaded",
+    "process_successfully_deleted": "Process successfully deleted"
   }
 }
