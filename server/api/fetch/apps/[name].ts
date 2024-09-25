@@ -11,6 +11,10 @@ export default defineEventHandler(async event => {
 
   const { name } = params.data
 
+  const details = await pm2Details(name)
+
+  if(details.length === 0) throw createError({ status: 404, message: t('api.app_not_found') })
+
   const eventStream = createEventStream(event)
 
   eventStream.push(JSON.stringify(await pm2Details(name)))

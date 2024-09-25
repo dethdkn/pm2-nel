@@ -35,6 +35,8 @@
     "uptime": "Uptime",
     "minutes": "minutes",
     "hours": "hours",
+    "instance": "Instance",
+    "interpreter": "Interpreter",
     "start": "Start",
     "reload": "Reload",
     "restart": "Restart",
@@ -82,10 +84,11 @@
     "user_registered_successfully": "User registered successfully",
     "password_successfully_modified": "Password successfully modified",
     "user_successfully_modified": "User successfully modified",
-    "user_successfully_started": "User successfully started",
+    "process_successfully_started": "Process successfully started",
     "process_successfully_stoped": "Process successfully stoped",
     "process_successfully_restarted": "Process successfully restarted",
     "process_successfully_reloaded": "Process successfully reloaded",
-    "process_successfully_deleted": "Process successfully deleted"
+    "process_successfully_deleted": "Process successfully deleted",
+    "app_not_found": "App not found"
   }
 }

@@ -15,5 +15,5 @@ export default defineEventHandler(async event => {
 
   await pm2Start(name)
 
-  return t('api.user_successfully_started')
+  return t('api.process_successfully_started')
 })
