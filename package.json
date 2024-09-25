@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@9.11.0",
-  "description": "🎯 PM2 plus open source alternative",
+  "description": "🎯 PM2 web ui",
   "author": {
     "name": "Gabriel 'DethDKN' Rosa",
     "email": "gabriel@rosa.dev.br",
