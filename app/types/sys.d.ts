@@ -5,9 +5,9 @@ export interface SysInfo{
   platform: platform,
   cpuName: string,
   numberOfCores: number,
-  totalMemory: number,
-  freeMemory: number,
-  usedMemory: number,
-  uptime: number,
+  totalMemory: string,
+  freeMemory: string,
+  usedMemory: string,
+  uptime: string,
   nodeVersion: string,
 }

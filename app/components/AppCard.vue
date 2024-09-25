@@ -46,11 +46,11 @@ const menu = computed(() => [[
       </p>
       <p class="mb-4 flex items-center justify-center space-x-2">
         <UIcon name="i-heroicons-server" />
-        <span>{{ t('apps.ram') }}: {{ process.ram }} {{ t('apps.gb') }}</span>
+        <span>{{ t('apps.ram') }}: {{ process.ram }}</span>
       </p>
       <p class="mb-4 flex items-center justify-center space-x-2">
         <UIcon name="i-heroicons-calendar-days" />
-        <span>{{ t('apps.uptime') }}: {{ process.uptime }} {{ t('apps.hours') }}</span>
+        <span>{{ t('apps.uptime') }}: {{ process.uptime.replaceAll('minutes', t('apps.minutes')).replaceAll('hours', t('apps.hours')) }}</span>
       </p>
     </div>
 

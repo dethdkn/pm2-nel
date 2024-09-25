@@ -10,11 +10,13 @@ export default function(): SysInfo{
   const cpuName = cpus[0]?.model || ''
   const numberOfCores = cpus.length
 
-  const totalMemory = bytesToGb(os.totalmem())
-  const freeMemory = bytesToGb(os.freemem())
-  const usedMemory = Number((totalMemory - freeMemory).toFixed(2))
+  const totalMemoryN = os.totalmem()
+  const freeMemoryN = os.freemem()
+  const totalMemory = formatBytes(totalMemoryN)
+  const freeMemory = formatBytes(freeMemoryN)
+  const usedMemory = formatBytes(totalMemoryN - freeMemoryN)
 
-  const uptime = Number((os.uptime() / 3600).toFixed(2))
+  const uptime = formatUptime(os.uptime(), 'sec')
 
   const nodeVersion = process.version
 

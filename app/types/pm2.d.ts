@@ -5,8 +5,9 @@ export interface PM2Process{
   status: string,
   instances: 'max' | number,
   cpu: number,
-  ram: number,
-  uptime: number,
+  ram: string,
+  ramI: number,
+  uptime: string,
 }
 
 export interface PM2Details extends PM2Process{

@@ -18,8 +18,9 @@ export function pm2List(){
           status: p.pm2_env?.status || '',
           instances: p.pm2_env?.instances || 0,
           cpu: p.monit?.cpu || 0,
-          ram: p.monit?.memory || 0,
-          uptime: Number(((Date.now() - (p.pm2_env?.pm_uptime || 0)) / (1000 * 60 * 60)).toFixed(2)),
+          ram: '',
+          ramI: p.monit?.memory || 0,
+          uptime: formatUptime(p.pm2_env?.pm_uptime || 0, 'epoch'),
         }))
 
         const mergedProcesses: PM2Process[] = []
@@ -29,11 +30,11 @@ export function pm2List(){
           if(existingProcess){
             existingProcess.pm_id = [...existingProcess.pm_id, ...p.pm_id]
             existingProcess.cpu += p.cpu
-            existingProcess.ram += p.ram
+            existingProcess.ramI += p.ramI
           }
           else mergedProcesses.push(p)
         }
-        for(const p of process) p.ram = bytesToGb(p.ram)
+        for(const p of process) p.ram = formatBytes(p.ramI)
 
         return resolve(mergedProcesses)
       })
@@ -57,8 +58,9 @@ export function pm2Details(name: string){
           status: a.pm2_env?.status || '',
           instances: a.pm2_env?.instances || -1,
           cpu: a.monit?.cpu || 0,
-          ram: bytesToGb(a.monit?.memory || 0),
-          uptime: Number(((Date.now() - (a.pm2_env?.pm_uptime || 0)) / (1000 * 60 * 60)).toFixed(2)),
+          ram: formatBytes(a.monit?.memory || 0),
+          ramI: a.monit?.memory || 0,
+          uptime: formatUptime(a.pm2_env?.pm_uptime || 0, 'epoch'),
           cwd: a.pm2_env?.pm_cwd || '',
           exec_path: a.pm2_env?.pm_exec_path || '',
           interpreter: a.pm2_env?.exec_interpreter || '',
