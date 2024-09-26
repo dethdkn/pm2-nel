@@ -43,8 +43,8 @@ function openEditUserModal(id: number, username: string, level: string){
 </script>
 
 <template>
-  <section class="mx-auto max-w-7xl px-4">
-    <div class="flex flex-col items-center justify-center space-y-3 py-3 sm:flex-row sm:justify-between">
+  <section class="mx-auto max-w-7xl p-4">
+    <div class="flex flex-col items-center justify-center space-y-3  sm:flex-row sm:justify-between">
       <UInput v-model="q" icon="i-heroicons-magnifying-glass-20-solid" :placeholder="t('general.search')" />
       <div class="flex items-center justify-center space-x-4">
         <UButton icon="i-heroicons-arrow-path-20-solid" :label="t('users.update_users')" color="blue" :loading="pending" @click="refresh" />

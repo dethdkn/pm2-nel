@@ -53,6 +53,9 @@ importers:
       vue:
         specifier: ^3.5.8
         version: 3.5.8(typescript@5.6.2)
+      vue-data-ui:
+        specifier: ^2.2.95
+        version: 2.2.95
       vue-router:
         specifier: ^4.4.5
         version: 4.4.5(vue@3.5.8(typescript@5.6.2))
@@ -5216,6 +5219,9 @@ packages:
 
   vue-bundle-renderer@2.1.1:
     resolution: {integrity: sha512-+qALLI5cQncuetYOXp4yScwYvqh8c6SMXee3B+M7oTZxOgtESP0l4j/fXdEJoZ+EdMxkGWIj+aSEyjXkOdmd7g==}
+
+  vue-data-ui@2.2.95:
+    resolution: {integrity: sha512-7+L2nbNVNvIz6lXO4BFV9aTyLk1L3dep9MsWWwPM1U2DAE+d5TRLURE5h/ayFWVBC4tYdgSgJjMAbAtRr+8Urw==}
 
   vue-demi@0.14.10:
     resolution: {integrity: sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==}
@@ -11263,6 +11269,8 @@ snapshots:
   vue-bundle-renderer@2.1.1:
     dependencies:
       ufo: 1.5.4
+
+  vue-data-ui@2.2.95: {}
 
   vue-demi@0.14.10(vue@3.5.8(typescript@5.6.2)):
     dependencies:
