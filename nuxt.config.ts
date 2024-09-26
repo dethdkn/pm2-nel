@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     ],
     experimental: { localeDetector: './server/localeDetector.ts' },
   },
-  runtimeConfig: { mongoUrl: '' },
   nitro: {
     imports: { presets: [
       { from: 'drizzle-orm', imports: ['eq', 'asc', 'desc', 'ilike', 'isNotNull', 'or'] },
