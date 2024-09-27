@@ -1,7 +1,7 @@
 {
   "name": "pm2-nel",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@9.11.0",
   "description": "🎯 PM2 web ui",
@@ -30,6 +30,7 @@
   "dependencies": {
     "@iconify-json/flag": "^1.2.0",
     "@iconify-json/heroicons": "^1.2.0",
+    "@iconify-json/logos": "^1.2.0",
     "@nuxt/fonts": "^0.9.2",
     "@nuxt/image": "^1.8.0",
     "@nuxt/ui": "^2.18.6",
@@ -42,8 +43,8 @@
     "nuxt": "^3.13.2",
     "nuxt-auth-utils": "^0.3.9",
     "pm2": "^5.4.2",
-    "vue": "^3.5.8",
-    "vue-data-ui": "^2.2.95",
+    "vue": "^3.5.9",
+    "vue-data-ui": "^2.2.96",
     "vue-router": "^4.4.5",
     "zod": "^3.23.8"
   },
