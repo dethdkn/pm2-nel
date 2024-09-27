@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://github.com/dethdkn/pm2-nel/blob/main/public/nel.png?raw=true" alt="PM2-Nel"/>
+   <img src="https://github.com/dethdkn/pm2-nel/blob/main/public/nel.png?raw=true" alt="PM2-Nel" width="100px"/>
 <h1 align="center">PM2-Nel</h1>
 </p>
 <p align="center">🎯 PM2 web ui</p>
