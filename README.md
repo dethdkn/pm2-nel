@@ -4,8 +4,8 @@
 </p>
 <p align="center">🎯 PM2 web ui</p>
 <p align="center">
-   <a href="https://github.com/dethdkn/ldap-passwords/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/dethdkn/ldap-passwords?color=%233da639&logo=open%20source%20initiative" alt="License"/>
+   <a href="https://github.com/dethdkn/pm2-nel/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/dethdkn/pm2-nel?color=%233da639&logo=open%20source%20initiative" alt="License"/>
   </a>
    <a href="https://gitmoji.dev">
       <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67" alt="Gitmoji"/>
