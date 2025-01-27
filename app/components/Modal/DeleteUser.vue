@@ -1,6 +1,4 @@
 <script setup lang='ts'>
-import { IdSchema } from '~/schemas/id'
-
 const emits = defineEmits<(e: 'update')=> void>()
 const { t } = useI18n()
 const toast = useToast()

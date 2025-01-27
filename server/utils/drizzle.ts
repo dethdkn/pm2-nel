@@ -1,4 +1,4 @@
-import { drizzle as d } from 'db0/integrations/drizzle/index'
+import { drizzle as d } from 'db0/integrations/drizzle'
 import { integer, sqliteTable, text } from 'drizzle-orm/sqlite-core'
 
 export const Users = sqliteTable('users', {

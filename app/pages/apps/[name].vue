@@ -1,6 +1,5 @@
 <script setup lang='ts'>
 import { destr } from 'destr'
-import type { PM2Details } from '~/types/pm2'
 
 const { t } = useI18n()
 const { name } = useRoute().params

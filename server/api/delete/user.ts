@@ -1,5 +1,3 @@
-import { IdSchema } from '~/schemas/id'
-
 export default defineEventHandler(async event => {
   const t = await useTranslation(event)
 

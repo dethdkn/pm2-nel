@@ -1,6 +1,5 @@
 <script setup lang='ts'>
 import { destr } from 'destr'
-import type { PM2Process } from '~/types/pm2'
 
 const { t } = useI18n()
 

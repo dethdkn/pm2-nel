@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import type { Auth } from '~/schemas/auth'
-import { AuthSchema } from '~/schemas/auth'
-
 const { t } = useI18n()
 const toast = useToast()
 const { start, finish, isLoading } = useLoadingIndicator()

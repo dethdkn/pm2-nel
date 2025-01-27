@@ -1,6 +1,5 @@
 /* eslint-disable promise/prefer-await-to-callbacks */
 import pm2 from 'pm2'
-import type { PM2Details, PM2Process } from '~/types/pm2'
 
 export function pm2List(){
   return new Promise<PM2Process[]>((resolve, reject) => {

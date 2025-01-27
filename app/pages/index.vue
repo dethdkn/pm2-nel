@@ -2,8 +2,6 @@
 import type { VueUiWheelConfig, VueUiWheelDataset } from 'vue-data-ui'
 import { destr } from 'destr'
 import 'vue-data-ui/style.css'
-// import type { PM2Process } from '~/types/pm2'
-import type { SysInfo } from '~/types/sys'
 
 useHead({ title: 'PM2 nel' })
 

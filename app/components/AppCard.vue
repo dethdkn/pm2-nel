@@ -1,6 +1,4 @@
 <script setup lang='ts'>
-import type { PM2Process } from '~/types/pm2'
-
 const props = defineProps({ process: { type: Object as PropType<PM2Process>, required: true } })
 
 const { t } = useI18n()

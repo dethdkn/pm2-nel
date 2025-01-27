@@ -1,6 +1,4 @@
 <script setup lang='ts'>
-import { UpdateUserSchema } from '~/schemas/user'
-
 const emits = defineEmits<(e: 'update')=> void>()
 const { t } = useI18n()
 const toast = useToast()

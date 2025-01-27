@@ -1,5 +1,3 @@
-import { SearchUserSchema } from '~/schemas/user'
-
 export default defineEventHandler(async event => {
   const t = await useTranslation(event)
 

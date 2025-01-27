@@ -1,7 +1,4 @@
 <script setup lang='ts'>
-import type { Password } from '~/schemas/user'
-import { PasswordSchema } from '~/schemas/user'
-
 const { t } = useI18n()
 const toast = useToast()
 const { start, finish, isLoading } = useLoadingIndicator()

@@ -1,5 +1,4 @@
 import { verifySha512Crypt } from 'ldap-passwords'
-import { AuthSchema } from '~/schemas/auth'
 
 export default defineEventHandler(async event => {
   const t = await useTranslation(event)

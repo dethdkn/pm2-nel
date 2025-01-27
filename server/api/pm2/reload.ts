@@ -1,5 +1,3 @@
-import { AppSchema } from '~/schemas/app'
-
 export default defineEventHandler(async event => {
   const t = await useTranslation(event)
 
